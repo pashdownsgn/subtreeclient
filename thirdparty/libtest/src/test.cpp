@@ -12,5 +12,5 @@
 
 void test ()
 {
-	std::cout << "test()" << std::endl;
+	std::cout << "This output is from test()" << std::endl;
 }
