@@ -8,7 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		DA8246BD1B9F89D600546050 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DA8246BC1B9F89D600546050 /* main.cpp */; };
+		DA8246D11B9F8CD000546050 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = DA8246CA1B9F8CD000546050 /* README.md */; };
+		DA8246D21B9F8CD000546050 /* test.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DA8246CC1B9F8CD000546050 /* test.cpp */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DA8246D41B9F8CD000546050 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DA8246CE1B9F8CD000546050 /* libtest.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = DA82469B1B9F81A700546050;
+			remoteInfo = libtest;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		DA8246B71B9F89D600546050 /* CopyFiles */ = {
@@ -23,9 +35,14 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		DA8246B91B9F89D600546050 /* subtreetest */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = subtreetest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA8246B91B9F89D600546050 /* build */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; name = subtreeclient; path = subtreeclient; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA8246BC1B9F89D600546050 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		DA8246C41B9F8B2400546050 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		DA8246C41B9F8B2400546050 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = .gitignore; path = ../.gitignore; sourceTree = SOURCE_ROOT; };
+		DA8246C61B9F8CD000546050 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		DA8246C91B9F8CD000546050 /* test.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = test.h; sourceTree = "<group>"; };
+		DA8246CA1B9F8CD000546050 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		DA8246CC1B9F8CD000546050 /* test.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = test.cpp; sourceTree = "<group>"; };
+		DA8246CE1B9F8CD000546050 /* libtest.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = libtest.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,10 +69,11 @@
 		DA8246BA1B9F89D600546050 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				DA8246B91B9F89D600546050 /* subtreetest */,
+				DA8246B91B9F89D600546050 /* build */,
 			);
 			name = Products;
-			sourceTree = "<group>";
+			path = build;
+			sourceTree = SOURCE_ROOT;
 		};
 		DA8246BB1B9F89D600546050 /* src */ = {
 			isa = PBXGroup;
@@ -69,17 +87,70 @@
 		DA8246C31B9F8A5F00546050 /* thirdparty */ = {
 			isa = PBXGroup;
 			children = (
+				DA8246C51B9F8CD000546050 /* libtest */,
 			);
 			name = thirdparty;
 			path = ../thirdparty;
 			sourceTree = SOURCE_ROOT;
 		};
+		DA8246C51B9F8CD000546050 /* libtest */ = {
+			isa = PBXGroup;
+			children = (
+				DA8246C61B9F8CD000546050 /* .gitignore */,
+				DA8246C71B9F8CD000546050 /* include */,
+				DA8246CA1B9F8CD000546050 /* README.md */,
+				DA8246CB1B9F8CD000546050 /* src */,
+				DA8246CD1B9F8CD000546050 /* xcode */,
+			);
+			path = libtest;
+			sourceTree = "<group>";
+		};
+		DA8246C71B9F8CD000546050 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				DA8246C81B9F8CD000546050 /* test */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		DA8246C81B9F8CD000546050 /* test */ = {
+			isa = PBXGroup;
+			children = (
+				DA8246C91B9F8CD000546050 /* test.h */,
+			);
+			path = test;
+			sourceTree = "<group>";
+		};
+		DA8246CB1B9F8CD000546050 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				DA8246CC1B9F8CD000546050 /* test.cpp */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		DA8246CD1B9F8CD000546050 /* xcode */ = {
+			isa = PBXGroup;
+			children = (
+				DA8246CE1B9F8CD000546050 /* libtest.xcodeproj */,
+			);
+			path = xcode;
+			sourceTree = "<group>";
+		};
+		DA8246CF1B9F8CD000546050 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DA8246D51B9F8CD000546050 /* liblibtest.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		DA8246B81B9F89D600546050 /* subtreetest */ = {
+		DA8246B81B9F89D600546050 /* subtreeclient */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DA8246C01B9F89D600546050 /* Build configuration list for PBXNativeTarget "subtreetest" */;
+			buildConfigurationList = DA8246C01B9F89D600546050 /* Build configuration list for PBXNativeTarget "subtreeclient" */;
 			buildPhases = (
 				DA8246B51B9F89D600546050 /* Sources */,
 				DA8246B61B9F89D600546050 /* Frameworks */,
@@ -89,9 +160,9 @@
 			);
 			dependencies = (
 			);
-			name = subtreetest;
-			productName = subtreetest;
-			productReference = DA8246B91B9F89D600546050 /* subtreetest */;
+			name = subtreeclient;
+			productName = subtreeclient;
+			productReference = DA8246B91B9F89D600546050 /* build */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -108,7 +179,7 @@
 					};
 				};
 			};
-			buildConfigurationList = DA8246B41B9F89D600546050 /* Build configuration list for PBXProject "subtreetest" */;
+			buildConfigurationList = DA8246B41B9F89D600546050 /* Build configuration list for PBXProject "subtreeclient" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -118,19 +189,37 @@
 			mainGroup = DA8246B01B9F89D600546050;
 			productRefGroup = DA8246BA1B9F89D600546050 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = DA8246CF1B9F8CD000546050 /* Products */;
+					ProjectRef = DA8246CE1B9F8CD000546050 /* libtest.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
-				DA8246B81B9F89D600546050 /* subtreetest */,
+				DA8246B81B9F89D600546050 /* subtreeclient */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		DA8246D51B9F8CD000546050 /* liblibtest.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = liblibtest.a;
+			remoteRef = DA8246D41B9F8CD000546050 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXSourcesBuildPhase section */
 		DA8246B51B9F89D600546050 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA8246D11B9F8CD000546050 /* README.md in Sources */,
 				DA8246BD1B9F89D600546050 /* main.cpp in Sources */,
+				DA8246D21B9F8CD000546050 /* test.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -241,7 +330,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		DA8246B41B9F89D600546050 /* Build configuration list for PBXProject "subtreetest" */ = {
+		DA8246B41B9F89D600546050 /* Build configuration list for PBXProject "subtreeclient" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DA8246BE1B9F89D600546050 /* Debug */,
@@ -250,7 +339,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DA8246C01B9F89D600546050 /* Build configuration list for PBXNativeTarget "subtreetest" */ = {
+		DA8246C01B9F89D600546050 /* Build configuration list for PBXNativeTarget "subtreeclient" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DA8246C11B9F89D600546050 /* Debug */,

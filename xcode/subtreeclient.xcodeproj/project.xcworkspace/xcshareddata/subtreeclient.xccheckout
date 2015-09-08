@@ -5,16 +5,16 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>FC4BFCA8-6C9D-48B4-AC60-CD1A0363CCF2</string>
+	<string>BA28D18D-67DD-4ACE-9E3A-BE3F112973C0</string>
 	<key>IDESourceControlProjectName</key>
-	<string>subtreetest</string>
+	<string>subtreeclient</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>04964E087DFDFD8B7AC390EAED0B20344D19E44C</key>
 		<string>https://github.com/pashdownsgn/subtreeclient.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>xcode/subtreetest.xcodeproj</string>
+	<string>xcode/subtreeclient.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>04964E087DFDFD8B7AC390EAED0B20344D19E44C</key>
